@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainfragment"
+    app:startDestination="@id/basFragment">
+
+    <fragment
+        android:id="@+id/basFragment"
+        android:name="com.example.sondeneme.BasFragment"
+        android:label="fragment_bas"
+        tools:layout="@layout/fragment_bas" >
+        <action
+            android:id="@+id/girisekranagecis"
+            app:destination="@id/uyegirisFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/kayitekraninegecis"
+            app:destination="@id/kayityapFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/uyegirisFragment"
+        android:name="com.example.sondeneme.uyegirisFragment"
+        android:label="fragment_uyegiris"
+        tools:layout="@layout/fragment_uyegiris" >
+        <action
+            android:id="@+id/icerikekraninagecis"
+            app:destination="@id/iceriklerFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/kayitekraninagecis2"
+            app:destination="@id/kayityapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kayityapFragment"
+        android:name="com.example.sondeneme.KayityapFragment"
+        android:label="fragment_kayityap"
+        tools:layout="@layout/fragment_kayityap" >
+        <action
+            android:id="@+id/üyeyegecis2"
+            app:destination="@id/uyegirisFragment" />
+        <action
+            android:id="@+id/kayitbilgilerigecis"
+            app:destination="@id/kayitBilgileriFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/iceriklerFragment"
+        android:name="com.example.sondeneme.iceriklerFragment"
+        android:label="fragment_icerikler"
+        tools:layout="@layout/fragment_icerikler" />
+    <fragment
+        android:id="@+id/kayitBilgileriFragment"
+        android:name="com.example.sondeneme.KayitBilgileriFragment"
+        android:label="fragment_kayit_bilgileri"
+        tools:layout="@layout/fragment_kayit_bilgileri" >
+        <action
+            android:id="@+id/giriseyenidengecis"
+            app:destination="@id/uyegirisFragment" />
+    </fragment>
+</navigation>
